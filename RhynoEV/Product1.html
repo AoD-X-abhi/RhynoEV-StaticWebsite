@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SE01 Lite</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+        body {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f5f5f5;
+      margin-right: 20px;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+      transition: transform 0.4s;
+    }
+    .nav-items a:hover{
+      transform: scale(1.18);
+      color:#2d2b44 ;
+      
+    }
+
+    .intro img{
+        width: 100%;
+        height: 420px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 100px;
+    }
+    /* CSS for Main */
+
+    .Engine{
+      display: flex;
+      margin-bottom: 10%;
+    }
+
+    .parts-1 img{
+      padding-left: 150px;
+      width: 500px;
+    }
+
+    .parts-2{
+      padding-right: 200px;
+      padding-left: 200px;
+    }
+
+    .parts-3 {
+      padding-right: 200px;
+      padding-left: 200px;
+    }
+
+    .parts-4 img{
+      padding-right: 150px;
+      width: 500px;
+    }
+
+    .space{
+      height: 50px;
+      background-color: grey;
+      border: 1px solid rgb(96, 96, 96);
+      border-radius: 20px;
+      margin-bottom: 10%;
+    }
+
+    .details{
+      margin: 40px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+    .details h1, p{
+      padding-left: 10%;
+    }
+
+    .details-right td{
+      width: 300px;
+      height: 70px;
+    }
+    .table-head{
+      font-size: 20px;
+      font-weight: bold;
+
+    }
+
+    /* CSS for Footer */
+
+    .footer {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #23222e;
+        padding: 40px 80px;
+        border: 5px solid white;
+    }
+
+    .footer .copy {
+        color: #fff;
+    }
+
+    .bottom-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 0;
+    }
+
+    .bottom-links .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 40px;
+    }
+
+    .bottom-links .links span {
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+        text-decoration: none;
+        color: #a1a1a1;
+        padding: 10px 20px;
+        font-size: 19px;
+        transition: 0.4s;
+    }
+    .bottom-links .links a:hover{
+        scale: calc(1.1);
+        color: rgb(250, 250, 247);
+    }
+    .links .social{
+        font-size: 33px;
+        transition: 0.3s;
+    }
+    .links .social:hover{
+        scale: calc(1.1);
+        color: rgb(250, 250, 247);
+
+    }
+
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Rhyno ZEV</a>
+    <nav class="nav-items">
+        <a href="Home.html">Home</a>
+        <a href="Products.html">Products-Models</a>
+        <a href="Network.html">Networks</a>
+        <a href="AboutUs.html">About</a>
+        <a href="ContactUs.html">Contact</a>
+        <a href="https://www.instagram.com/accounts/login/" id="Logo-nav"><i class="fa-brands fa-instagram" style="font-size: 22px;"></i></a>
+        <a href="https://www.linkedin.com/login" id="Logo-nav"><i class="fa-brands fa-linkedin-in" style="font-size: 22px;"></i></a>
+    </nav>
+</header>
+
+<main>
+    
+  <div class="intro">
+    <img src="Screenshot 2024-06-06 202009.png" alt="Head Image">
+  </div>
+  <div class="parts">
+    <div class="Engine" style="font-family: cursive;">
+      <div class="parts-1">
+        <img src="Screenshot 2024-06-06 194024.png" alt="Engine">
+      </div>
+      <div class="parts-2">
+        <h1 style="padding-left: 32%; font-weight: bolder;">BLDC 2.0 Motor</h1><br>
+        <p>White carbon Motors smart scooter is high performance, zero emissions two-wheeled electric vehicle with IP57 Waterproof Rating BLDC motor. 250 Watt.</p>
+      </div>
+    </div>
+
+    <div class="Engine" style="font-family: cursive;">
+      <div class="parts-3">
+        <h1 style="padding-left: 32%; font-weight: bolder;">Smart controller</h1><br>
+        <p>12 Tubes FOC controller, Energy efficiency converting rate 95%+. Dual protection, 
+          EABS</p>
+      </div>
+      <div class="parts-4">
+        <img src="Screenshot 2024-06-06 194031.png" alt="Engine">
+      </div>
+    </div>
+
+    <div class="Engine" style="font-family: cursive;">
+      <div class="parts-1">
+        <img src="Screenshot 2024-06-06 194041.png" alt="Engine">
+      </div>
+      <div class="parts-2">
+        <h1 style="padding-left: 32%; font-weight: bolder;">Cold-rolled Steel </h1><br>
+        <p>After 1000,000 times vibration test. Energy efficiency converting rate 95%+. Acheive.</p>
+      </div>
+    </div>
+  </div>
+  <div class="space"></div>
+  <h1 style="font-weight: 600; padding-left: 9%;">SE01 Lite</h1>
+  <p style="font-size: 12px; font-style: italic;">Details are provided</p>
+     
+  <div class="details" >
+     <div class="details-left">
+        <img src="SE Lite.webp" alt="SE 01 Lite" style="width: 500px; border-radius: 5px; margin-left: 10%;"> 
+     </div>
+     <div class="details-right">
+        <table>
+          <tr>
+            <td><span class="table-head">Top speed</span><br><span>25 kmph</span></td>
+            <td><span class="table-head">Tyre size</span><br><span>3" 10" Tubeless (Front/Rear)</span></td>
+          </tr>
+          <tr>
+            <td><span class="table-head">Range</span> <br>
+             <span>60km / Charge | 120km </span> </td>
+            <td><span class="table-head">LED</span> <br><span>Whole vehicle equipped with LED lights
+            </span></td>
+          </tr>
+          <tr>
+            <td><span class="table-head">Portable battery</span> <br><span>48V 20AH | 48V 24AH
+            </span></td>
+            <td><span class="table-head">Pedal Assistance</span> <br><span>Just in case</span></td>
+          </tr>
+          <tr>
+            <td><span class="table-head">Advance Digital Display</span> <br><span>5" LCD</span></td>
+            <td><span class="table-head">Rated Power</span> <br> <span>250Watt, BLDC motor
+            </span></td>
+          </tr>
+          <tr>
+            <td><span class="table-head">Peak Power</span> <br> <span>250Watt
+            </span></td>
+            <td><span class="table-head">Break System</span> <br><span>FR - Disc brake | RR - Drum brake</span></td>
+          </tr>
+          <tr>
+            <td><span class="table-head">Loading Capacity</span> <br> <span>120kg</span></td>
+            <td><span class="table-head"> Controller</span> <br><span>Smart Controller | Electronics ABS</span></td>
+          </tr>
+        </table>
+     </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="copy">
+      
+      <span style="margin-left: 30px;">&copy; 2022 Developer</span>
+  </div>
+      <div class="bottom-links" style="background-color: #000; border-radius: 6%;">
+          <div class="links" style="margin-top:-38px ;">
+              <span>Our Sevices</span>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Refund Policy</a>
+              <a href="#">Website</a>
+          </div>
+          <div class="links">
+              <span>More Info</span>
+              <a href="ContactUs.html">Contact Us</a>
+              <a href="Products.html">Products</a>
+              <a href="AboutUs.html">Career</a>
+              <a href="Network.html">Register Now</a>
+          </div>
+          <div class="links" style="margin-top:-8px ;">
+              <span>Social Links</span>
+              <a href="https://www.linkedin.com/login/"><i class="fab fa-linkedin social"></i></a>
+                <a href="https://r.search.yahoo.com/_ylt=Awr1QPFP4gxm7BEH9He7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1712149200/RO=10/RU=https%3a%2f%2ftwitter.com%2fteachnook/RK=2/RS=Rc0RHE1I5LDQIQXunqs7tMh0lUQ-"><i class="fab fa-twitter social"></i></a>
+                <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram social"></i></a>
+          </div>
+      </div>
+</footer>
+</body>
+</html>

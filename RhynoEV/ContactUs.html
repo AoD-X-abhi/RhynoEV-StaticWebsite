@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Contact-(Query)</title>
+    <style>
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      background-color: #d7d7d7;
+    }
+
+    /* CSS for header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f5f5f5;
+    }
+
+    .header .logo {
+      font-size: 25px;
+      font-family: 'Sriracha', cursive;
+      color: #000;
+      text-decoration: none;
+      margin-left: 30px;
+    }
+
+    .nav-items {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #f5f5f5;
+      margin-right: 20px;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .nav-items a {
+      text-decoration: none;
+      color: #000;
+      padding: 35px 20px;
+    }
+
+    .nav-items a{
+      transition: transform 0.4s;
+    }
+    .nav-items a:hover{
+      transform: scale(1.18);
+      color:#2d2b44 ;
+      
+    }
+
+    .menu-toggle {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(255, 255, 255); /* Background color of the menu bar */
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 1s ease-in-out; /* Transition for sliding effect */
+    }
+
+    .nav-items a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        border-top: 1px solid #ddd;
+        color: rgb(8, 8, 8); /* Text color for the menu items */
+    }
+
+    .nav-items a:last-child {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+.menu-toggle.active .fa-bars {
+    display: none;
+}
+
+.menu-toggle.active .fa-times {
+    display: inline;
+}
+
+/* Keyframes for the slide down animation */
+@keyframes slideDown {
+    from {
+        max-height: 0;
+    }
+    to {
+        max-height: 500px; /* Adjust this value as needed for the height of the expanded menu */
+    }
+}
+
+/* Keyframes for the slide up animation */
+@keyframes slideUp {
+    from {
+        max-height: 500px; /* Adjust this value to match the height of the expanded menu */
+    }
+    to {
+        max-height: 0;
+    }
+}
+
+.nav-items.active {
+    animation: slideDown 1s forwards; /* Apply the slide-down animation */
+}
+
+.nav-items.closing {
+    animation: slideUp 1s forwards; /* Apply the slide-up animation */
+    max-height: 0;
+}
+
+        /* Body CSS */
+
+        .landing_page * {
+            font-family: Nunito, sans-serif;
+        }
+
+        .form-box{
+            /* Start the element off-screen to the left */
+            transform: translateX(-100%);
+            /* Apply the animation */
+            animation: slideIn 1s forwards;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .content-box{
+            
+            /* Start the element off-screen to the left */
+            transform: translateX(-100%);
+            /* Apply the animation */
+            animation: slideIn 2s forwards;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .share-icon{
+            transition: transform 0.5s;
+        }
+
+        .share-icon:hover{
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+
+        .landing_page .responsive-container-block {
+        min-height: 75px;
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+        justify-content: flex-start;
+        }
+
+        .landing_page .text-blk {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        line-height: 25px;
+        }
+
+        .landing_page .responsive-cell-block {
+        min-height: 75px;
+        }
+
+        .landing_page .responsive-container-block.container {
+        max-width: 1320px;
+        margin-top: 60px;
+        margin-right: auto;
+        margin-bottom: 60px;
+        margin-left: auto;
+        position: relative;
+        }
+
+        .landing_page .form-box {
+        background-color: #151617;
+        color: white;
+        padding-top: 35px;
+        padding-right: 33px;
+        padding-bottom: 35px;
+        padding-left: 33px;
+        max-width: 506px;
+        }
+
+        .landing_page .text-blk.contactus-head {
+        font-size: 30px;
+        line-height: 40px;
+        }
+
+        .landing_page .text-blk.contactus-subhead {
+        color: #d4d4d4;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 18px;
+        margin-left: 0px;
+        }
+
+        .landing_page .input {
+        width: 100%;
+        height: 50px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        font-size: 18px;
+        padding-top: 1px;
+        padding-right: 125px;
+        padding-bottom: 1px;
+        padding-left: 22.5px;
+        border-top-width: 2px;
+        border-right-width: 2px;
+        border-bottom-width: 2px;
+        border-left-width: 2px;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-top-color: #767676;
+        border-right-color: #767676;
+        border-bottom-color: #767676;
+        border-left-color: #767676;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;
+        background-color: #212223;
+        padding: 1px 12.5px 1px 22.5px;
+    
+        }
+
+        .landing_page .textinput {
+        width: 100%;
+        height: 233px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        font-size: 18px;
+        padding-top: 22px;
+        padding-right: 22px;
+        padding-bottom: 22px;
+        padding-left: 22px;
+        background-color: #212223;
+        border-top-width: 1px;
+        border-right-width: 1px;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-top-color: #767676;
+        border-right-color: #767676;
+        border-bottom-color: #767676;
+
+        }
+
+        .landing_page .submit-btn {
+        width: 40%;
+        margin-left: 120px;
+        height: 56px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: #146132;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        border-top-width: 2px;
+        border-right-width: 2px;
+        border-bottom-width: 2px;
+        border-left-width: 2px;
+        border-top-style: none;
+        border-right-style: none;
+        border-bottom-style: none;
+        border-left-style: none;
+        border-top-color: #146132;
+        border-right-color: #146132;
+        border-bottom-color: #146132;
+        border-left-color: #146132;
+        border-image-source: initial;
+        border-image-slice: initial;
+        border-image-width: initial;
+        border-image-outset: initial;
+        border-image-repeat: initial;
+        }
+
+        .landing_page .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-6.wk-ipadp-6.emial {
+        padding-top: 0px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        }
+
+        .landing_page .responsive-cell-block.wk-ipadp-6.wk-tab-12.wk-mobile-12.wk-desk-6.right-one {
+        display: flex;
+        justify-content: center;
+        }
+
+        .landing_page .responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12.left-one {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: white;
+        }
+
+        .landing_page .text-blk.section-subhead {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 50px;
+        margin-left: 0px;
+        max-width: 420px;
+        font-size: 18px;
+        color: #b6b6b6;
+        }
+
+        .landing_page .text-blk.section-head {
+        font-size: 40px;
+        line-height: 55px;
+        font-weight: 800;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 15px;
+        margin-left: 0px;
+        max-width: 450px;
+        }
+
+        .landing_page .icons-container {
+        max-width: 450px;
+        display: flex;
+        justify-content: space-evenly;
+        }
+
+        .landing_page .img {
+        width: 31px;
+        height: 31px;
+        }
+
+        .landing_page .responsive-container-block.big-container {
+        background-color: rgb(255, 255, 255);
+        padding-top: 0px;
+        padding-right: 50px;
+        padding-bottom: 0px;
+        padding-left: 50px;
+        position: relative;
+        }
+
+        .landing_page .bg-img {
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        height: 100%;
+        opacity: 0.5;
+        object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+        .landing_page .responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12.left-one {
+            justify-content: center;
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 30px;
+            margin-left: 0px;
+        }
+
+        .landing_page .responsive-cell-block.wk-tab-12.wk-mobile-12.wk-desk-6.wk-ipadp-6.emial {
+            padding-top: 0px;
+            padding-right: 0px;
+            padding-bottom: 0px;
+            padding-left: 0px;
+        }
+
+        .landing_page .responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12.left-one {
+            margin: 0 0 40px 0;
+        }
+        }
+
+        @media (max-width: 500px) {
+        .landing_page .text-blk.section-head {
+            font-size: 26px;
+            line-height: 40px;
+        }
+
+        .landing_page .responsive-container-block.big-container {
+            padding-top: 0px;
+            padding-right: 20px;
+            padding-bottom: 0px;
+            padding-left: 20px;
+        }
+
+        .landing_page .text-blk.section-subhead {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-bottom: 30px;
+            margin-left: 0px;
+            font-size: 16px;
+        }
+
+        .landing_page .form-box {
+            padding-top: 30px;
+            padding-right: 15px;
+            padding-bottom: 30px;
+            padding-left: 15px;
+        }
+
+        .landing_page .responsive-cell-block.wk-desk-6.wk-ipadp-6.wk-tab-12.wk-mobile-12.left-one {
+            margin: 0 0 30px 0;
+        }
+
+        .landing_page .input {
+            height: 45px;
+        }
+
+        .landing_page .text-blk.contactus-head {
+            font-size: 24px;
+            line-height: 34px;
+        }
+        }
+
+        /* CSS for Footer */
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #23222e;
+            padding: 40px 80px;
+            border: 2px solid white;
+        }
+
+        .footer .copy {
+            color: #fff;
+        }
+
+        .bottom-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 40px 0;
+        }
+
+        .bottom-links .links {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 40px;
+        }
+
+        .bottom-links .links span {
+            font-size: 20px;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 10px 0;
+        }
+
+        .bottom-links .links a {
+            text-decoration: none;
+            color: #a1a1a1;
+            padding: 10px 20px;
+            font-size: 19px;
+            transition: 0.4s;
+        }
+        .bottom-links .links a:hover{
+            scale: calc(1.1);
+            color: rgb(250, 250, 247);
+        }
+        .links .social{
+            font-size: 33px;
+            transition: 0.3s;
+        }
+        .links .social:hover{
+            scale: calc(1.1);
+            color: rgb(250, 250, 247);
+
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+
+        *,
+        *:before,
+        *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        }
+
+        body {
+        margin: 0;
+        }
+
+        .wk-desk-1 {
+        width: 8.333333%;
+        }
+
+        .wk-desk-2 {
+        width: 16.666667%;
+        }
+
+        .wk-desk-3 {
+        width: 25%;
+        }
+
+        .wk-desk-4 {
+        width: 33.333333%;
+        }
+
+        .wk-desk-5 {
+        width: 41.666667%;
+        }
+
+        .wk-desk-6 {
+        width: 50%;
+        }
+
+        .wk-desk-7 {
+        width: 58.333333%;
+        }
+
+        .wk-desk-8 {
+        width: 66.666667%;
+        }
+
+        .wk-desk-9 {
+        width: 75%;
+        }
+
+        .wk-desk-10 {
+        width: 83.333333%;
+        }
+
+        .wk-desk-11 {
+        width: 91.666667%;
+        }
+
+        .wk-desk-12 {
+        width: 100%;
+        }
+
+        
+
+        @media (max-width: 768px) {
+        .wk-tab-1 {
+            width: 8.333333%;
+        }
+
+        .wk-tab-2 {
+            width: 16.666667%;
+        }
+
+        .wk-tab-3 {
+            width: 25%;
+        }
+
+        .wk-tab-4 {
+            width: 33.333333%;
+        }
+
+        .wk-tab-5 {
+            width: 41.666667%;
+        }
+
+        .wk-tab-6 {
+            width: 50%;
+        }
+
+        .wk-tab-7 {
+            width: 58.333333%;
+        }
+
+        .wk-tab-8 {
+            width: 66.666667%;
+        }
+
+        .wk-tab-9 {
+            width: 75%;
+        }
+
+        .wk-tab-10 {
+            width: 83.333333%;
+        }
+
+        .wk-tab-11 {
+            width: 91.666667%;
+        }
+
+        .wk-tab-12 {
+            width: 100%;
+        }
+        .footer {
+        padding: 20px;
+    }
+
+    .bottom-links .links {
+        padding: 10px 0;
+        margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+        font-size: 17px;
+    }
+
+    .links .social {
+        font-size: 28px;
+    }
+}
+
+        @media (max-width: 480px) {
+        .wk-mobile-1 {
+            width: 8.333333%;
+        }
+
+        .wk-mobile-2 {
+            width: 16.666667%;
+        }
+
+        .wk-mobile-3 {
+            width: 25%;
+        }
+
+        .wk-mobile-4 {
+            width: 33.333333%;
+        }
+
+        .wk-mobile-5 {
+            width: 41.666667%;
+        }
+
+        .wk-mobile-6 {
+            width: 50%;
+        }
+
+        .wk-mobile-7 {
+            width: 58.333333%;
+        }
+
+        .wk-mobile-8 {
+            width: 66.666667%;
+        }
+
+        .wk-mobile-9 {
+            width: 75%;
+        }
+
+        .wk-mobile-10 {
+            width: 83.333333%;
+        }
+
+        .wk-mobile-11 {
+            width: 91.666667%;
+        }
+
+        .wk-mobile-12 {
+            width: 100%;
+        }
+        .footer {
+        padding: 10px;
+    }
+
+    .copy {
+        margin-bottom: 10px;
+    }
+
+      .bottom-links .links span {
+        font-size: 18px;
+      }
+
+      .bottom-links .links a {
+        font-size: 16px;
+      }
+
+      .links .social {
+        font-size: 24px;
+      }
+    }
+
+    .error {
+            color: rgb(174, 49, 49);
+            font-size: 12px;
+            display: none;
+        }
+        .input, .textinput {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .success {
+            border: 2px solid rgb(241, 245, 241);
+        }
+        .failed {
+            border: 2px solid rgb(244, 240, 240);
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Rhyno ZEV</a>
+        <nav class="nav-items">
+            <a href="Home.html">Home</a>
+            <a href="Products.html">Products-Models</a>
+            <a href="Network.html">Networks</a>
+            <a href="AboutUs.html">About</a>
+            <a href="ContactUs.html">Contact</a>
+            <a href="https://www.instagram.com/accounts/login/" id="Logo-nav"><i class="fa-brands fa-instagram" style="font-size: 22px;"></i></a>
+            <a href="https://www.linkedin.com/login/" id="Logo-nav"><i class="fa-brands fa-linkedin-in" style="font-size: 22px;"></i></a>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu" style="padding: 20px;">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <div class="landing_page">
+        <div class="responsive-container-block big-container">
+          <div class="responsive-container-block container">
+            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 left-one">
+              <div class="content-box">
+                <p class="text-blk section-head" style="font-family: 'Sriracha', cursive; color: #000;">
+                  Contact US <span><img src="https://tse4.mm.bing.net/th?id=OIP.L_Ct9g1UWKAc0ZiUl6SKVQHaHa&pid=Api&P=0&h=180" alt="Logo" style="width: 40%;"></span>
+                </p>
+                <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(20, 20, 20); padding-right: 40px;"><span style="color: rgb(35, 35, 34); font-size: 33px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">F</span>eel free to use the following paragraph as a "Contact Us" section for our brand, RHYNO EV, which sells electric motorcycles: <br><br><br>
+
+                    At RHYNO EV, we're dedicated to providing top-notch customer service and support for all your electric motorcycle needs.
+                </p>
+                <div class="icons-container">
+                  <a class="share-icon">
+                    <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
+                  </a>
+                  <a class="share-icon">
+                    <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
+                  </a>
+                  <a class="share-icon">
+                    <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
+                  </a>
+                  <a class="share-icon">
+                    <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6 right-one" id="i1zj">
+                <form class="form-box" style="border-radius: 30px;" id="quoteForm">
+                    <div class="container-block form-wrapper">
+                        <p class="text-blk contactus-head">
+                            <a class="link" href="">
+                            </a>
+                            Contact Us
+                        </p>
+                        <p class="text-blk contactus-subhead">
+                            We will get back to you in 24 hours
+                        </p>
+                        <div class="responsive-container-block">
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-7">
+                                <input class="input" id="firstName" name="FirstName" placeholder="First Name" style="color: white;">
+                                <span class="error" id="firstNameError">First name is required and should only contain letters.</span>
+                            </div>
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i1ro7">
+                                <input class="input" id="lastName" name="LastName" placeholder="Last Name" style="color: white;">
+                                <span class="error" id="lastNameError">Last name is required and should only contain letters.</span>
+                            </div>
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-6 emial" id="ityct">
+                                <input class="input" id="email" name="Email" placeholder="Email" style="color: white;">
+                                <span class="error" id="emailError">Valid email is required (e.g., test@test.com).</span>
+                            </div>
+                            <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                                <input class="input" id="phoneNumber" name="PhoneNumber" placeholder="Phone Number" style="color: white;">
+                                <span class="error" id="phoneNumberError">Phone number must be exactly 10 digits.</span>
+                            </div>
+                            <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-7">
+                                <textarea aria-placeholder="Type message here" class="textinput" id="message" placeholder="Type message here" style="color: white;"></textarea>
+                                <span class="error" id="messageError">Message is required.</span>
+                                <div class="error" id="maxwords">Max Words </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">SUBMIT</button>
+                    </div>
+                </form>
+            
+                <script>
+                    document.getElementById('quoteForm').addEventListener('submit', function (e) {
+                        e.preventDefault();
+            
+                        // Clear previous errors
+                        let errorElements = document.querySelectorAll('.error');
+                        errorElements.forEach(element => element.style.display = 'none');
+            
+                        let inputs = document.querySelectorAll('.input, .textinput');
+                        inputs.forEach(input => input.classList.remove('success', 'failed'));
+            
+                        // Validate First Name
+                        let firstName = document.getElementById('firstName');
+                        let firstNameError = document.getElementById('firstNameError');
+                        if (firstName.value === '' || !/^[a-zA-Z]+$/.test(firstName.value)) {
+                            firstName.classList.add('failed');
+                            firstNameError.style.display = 'block';
+                        } else {
+                            firstName.classList.add('success');
+                        }
+            
+                        // Validate Last Name
+                        let lastName = document.getElementById('lastName');
+                        let lastNameError = document.getElementById('lastNameError');
+                        if (lastName.value === '' || !/^[a-zA-Z]+$/.test(lastName.value)) {
+                            lastName.classList.add('failed');
+                            lastNameError.style.display = 'block';
+                        } else {
+                            lastName.classList.add('success');
+                        }
+            
+                        // Validate Email
+                        let email = document.getElementById('email');
+                        let emailError = document.getElementById('emailError');
+                        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (email.value === '' || !emailPattern.test(email.value)) {
+                            email.classList.add('failed');
+                            emailError.style.display = 'block';
+                        } else {
+                            email.classList.add('success');
+                        }
+            
+                        // Validate Phone Number
+                        let phoneNumber = document.getElementById('phoneNumber');
+                        let phoneNumberError = document.getElementById('phoneNumberError');
+                        if (phoneNumber.value === '' || !/^\d{10}$/.test(phoneNumber.value)) {
+                            phoneNumber.classList.add('failed');
+                            phoneNumberError.style.display = 'block';
+                        } else {
+                            phoneNumber.classList.add('success');
+                        }
+            
+                        // Validate Message
+                        let message = document.getElementById('message');
+                        let messageError = document.getElementById('messageError');
+                         
+                        if (message.value === '') {
+                            message.classList.add('failed');
+                            messageError.style.display = 'block';
+                        } else {
+                            message.classList.add('success');
+                        }
+            
+                        // Check if all validations passed
+                        let validationFailed = document.querySelector('.failed');
+                        if (!validationFailed) {
+                            // Submit form or further processing
+                            alert('Form submitted successfully!');
+                        }
+                    });
+                </script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="" alt="">
+      <footer class="footer">
+        <div class="copy">
+            
+            <span style="margin-left: 30px;">&copy; 2022 Developer</span>
+        </div>
+            <div class="bottom-links" style="background-color: #000; border-radius: 6%;">
+                <div class="links" style="margin-top:-38px ;">
+                    <span>Our Sevices</span>
+                    <a href="https://teachnook.com/PrivacyPolicy">Privacy Policy</a>
+                    <a href="https://teachnook.com/TermsAndConditions">Refund Policy</a>
+                    <a href="https://teachnook.com/">Website</a>
+                </div>
+                <div class="links">
+                    <span>More Info</span>
+                    <a href="ContactUs.html">Contact Us</a>
+                    <a href="Products.html">Products</a>
+                    <a href="AboutUs.html">Career</a>
+                    <a href="Network.html">Register Now</a>
+                </div>
+                <div class="links" style="margin-top:-8px ;">
+                    <span>Social Links</span>
+                    <a href="https://www.linkedin.com/login/"><i class="fab fa-linkedin social"></i></a>
+                <a href="https://r.search.yahoo.com/_ylt=Awr1QPFP4gxm7BEH9He7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1712149200/RO=10/RU=https%3a%2f%2ftwitter.com%2fteachnook/RK=2/RS=Rc0RHE1I5LDQIQXunqs7tMh0lUQ-"><i class="fab fa-twitter social"></i></a>
+                <a href="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram social"></i></a>
+                </div>
+            </div>
+    </footer>
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            var navItems = document.querySelector('.nav-items');
+            var menuToggle = document.getElementById('mobile-menu');
+            var icon = menuToggle.querySelector('i');
+    
+            if (navItems.classList.contains('active')) {
+                navItems.classList.remove('active');
+                navItems.classList.add('closing');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+    
+                // Remove the 'closing' class after the animation ends
+                setTimeout(function() {
+                    navItems.classList.remove('closing');
+                }, 1000); // Match this duration with the CSS animation duration
+            } else {
+                navItems.classList.add('active');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+    </script>
+</body>
+</html>

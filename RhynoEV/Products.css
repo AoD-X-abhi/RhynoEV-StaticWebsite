@@ -1,0 +1,290 @@
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #d7d7d7;
+  }
+
+  /* CSS for header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+  }
+
+  .header .logo {
+    font-size: 25px;
+    font-family: 'Sriracha', cursive;
+    color: #000;
+    text-decoration: none;
+    margin-left: 30px;
+  }
+
+  .nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f5f5f5;
+    margin-right: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .nav-items a {
+    text-decoration: none;
+    color: #000;
+    padding: 35px 20px;
+  }
+
+  .nav-items a{
+    transition: transform 0.4s;
+  }
+  .nav-items a:hover{
+    transform: scale(1.18);
+    color:#2d2b44 ;
+    
+  }
+
+  @keyframes slide-right {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .intro {
+    animation: slide-right 1.3s ease-out forwards;
+  }
+
+  .inner-section{
+    animation: slide-right 1.3s ease-out forwards;
+  }
+
+  .outer-section{
+    margin:10%;
+  }
+
+  .inner-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap: 40px;
+  }
+
+  .inner-product{
+    /* border: 1px solid black; */
+  
+    border-radius: 20px;
+  }
+  
+  .details{
+    padding: 20px;
+
+  }
+
+  .details button{
+    transition: transform 0.6s;
+  }
+  .details button:hover{
+    transform: scale(1.1);
+  }
+  
+  /* CSS for Footer */
+
+  .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #23222e;
+      padding: 40px 80px;
+      border: 2px solid white;
+  }
+
+  .footer .copy {
+      color: #fff;
+  }
+
+  .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 0;
+  }
+
+  .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 40px;
+  }
+
+  .bottom-links .links span {
+      font-size: 20px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 10px 0;
+  }
+
+  .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+      font-size: 19px;
+      transition: 0.4s;
+  }
+  .bottom-links .links a:hover{
+      scale: calc(1.1);
+      color: rgb(250, 250, 247);
+  }
+  .links .social{
+      font-size: 33px;
+      transition: 0.3s;
+  }
+  .links .social:hover{
+      scale: calc(1.1);
+      color: rgb(250, 250, 247);
+
+  }
+
+    /* Responsive Media Queries */
+  @media (max-width: 768px) {
+    .nav-items {
+      flex-direction: column;
+      margin-right: 0;
+    }
+
+    .nav-items a {
+      padding: 20px;
+    }
+
+    .footer {
+      padding: 20px;
+  }
+
+  .bottom-links .links {
+      padding: 10px 0;
+      margin: 10px 0;
+  }
+
+  .bottom-links .links a {
+      font-size: 17px;
+  }
+
+  .links .social {
+      font-size: 28px;
+  }
+}
+
+  @media (max-width: 480px) {
+    
+
+
+    .footer {
+      padding: 10px;
+  }
+
+  .copy {
+      margin-bottom: 10px;
+  }
+
+    .bottom-links .links span {
+      font-size: 18px;
+    }
+
+    .bottom-links .links a {
+      font-size: 16px;
+    }
+
+    .links .social {
+      font-size: 24px;
+    }
+  }
+
+  /* Define the fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .menu-toggle {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+
+  .nav-items {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: rgb(255, 255, 255); /* Background color of the menu bar */
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 1s ease-in-out; /* Transition for sliding effect */
+  }
+
+  .nav-items a {
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+      border-top: 1px solid #ddd;
+      color: rgb(8, 8, 8); /* Text color for the menu items */
+  }
+
+  .nav-items a:last-child {
+      border-bottom: 1px solid #ddd;
+  }
+}
+
+.menu-toggle.active .fa-bars {
+  display: none;
+}
+
+.menu-toggle.active .fa-times {
+  display: inline;
+}
+
+/* Keyframes for the slide down animation */
+@keyframes slideDown {
+  from {
+      max-height: 0;
+  }
+  to {
+      max-height: 500px; /* Adjust this value as needed for the height of the expanded menu */
+  }
+}
+
+/* Keyframes for the slide up animation */
+@keyframes slideUp {
+  from {
+      max-height: 500px; /* Adjust this value to match the height of the expanded menu */
+  }
+  to {
+      max-height: 0;
+  }
+}
+
+.nav-items.active {
+  animation: slideDown 1s forwards; /* Apply the slide-down animation */
+}
+
+.nav-items.closing {
+  animation: slideUp 1s forwards; /* Apply the slide-up animation */
+  max-height: 0;
+}

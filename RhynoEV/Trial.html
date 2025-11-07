@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Product Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 900px;
+    margin: 20px;
+}
+
+.product-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-images img {
+    max-width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.product-images img.active {
+    border: 2px solid #007BFF;
+}
+
+.product-details {
+    flex: 2;
+    padding: 20px;
+}
+
+.product-details h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.product-details .price {
+    font-size: 20px;
+    color: #E91E63;
+    margin: 10px 0;
+}
+
+.product-details .description {
+    color: #666;
+    line-height: 1.5;
+}
+
+.product-details .specs {
+    list-style: none;
+    padding: 0;
+    color: #555;
+    margin: 20px 0;
+}
+
+.product-details .specs li {
+    margin-bottom: 5px;
+}
+
+.buy-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="product-images">
+            <img src="bike1.jpg" alt="Bike Image 1" class="active">
+            <img src="bike2.jpg" alt="Bike Image 2">
+            <img src="bike3.jpg" alt="Bike Image 3">
+        </div>
+        <div class="product-details">
+            <h1>Mountain Bike X200</h1>
+            <p class="price">$1,299.99</p>
+            <p class="description">
+                The Mountain Bike X200 is designed for the ultimate off-road experience. With its robust frame and advanced suspension, it provides superior comfort and control. Perfect for adventurers looking to explore new trails.
+            </p>
+            <ul class="specs">
+                <li>Frame: Aluminum</li>
+                <li>Suspension: Front and Rear</li>
+                <li>Gears: 21-speed Shimano</li>
+                <li>Brakes: Hydraulic Disc</li>
+                <li>Tires: 29-inch</li>
+            </ul>
+            <button class="buy-button">Buy Now</button>
+        </div>
+    </div>
+</body>
+</html>
