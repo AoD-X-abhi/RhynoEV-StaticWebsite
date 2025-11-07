@@ -77,8 +77,6 @@ Built with **HTML**, **CSS**, and **JavaScript**, this website contains dedicate
 ### 📞 Contact Us  
 <img src="images/ContactUs.png" width="900">
 
-> _Replace the image paths above with actual links after uploading screenshots to your repository_
-
 ---
 
 ## 🚴 Featured Bikes  
