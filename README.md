@@ -72,7 +72,7 @@ Built with **HTML**, **CSS**, and **JavaScript**, this website contains dedicate
 <img src="images/AboutUs.png" width="900">
 
 ### ⚙️ Products Page  
-<img src="images/ProductDetails.gif" width="900" alt="Product Features">
+![Details](images/ProductDetails.gif)
 
 ### 📞 Contact Us  
 <img src="images/ContactUs.png" width="900">
