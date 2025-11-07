@@ -1,6 +1,6 @@
 <div align="center">
 
-# <img src="RhynoEV/Rhyno.png" width="50"> RhynoEV — Electric Bikes Website  
+# <img src="RhynoEV/Rhyno.png" width="200"> RhynoEV — Electric Bikes Website  
 
 [![HTML](https://img.shields.io/badge/HTML-5-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS](https://img.shields.io/badge/CSS-3-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -17,7 +17,7 @@ Built with **HTML**, **CSS**, and **JavaScript**, this website contains dedicate
 
 ---
 
-<img src="images/HomePage.png" width="700">
+<img src="images/HomePage.png" width="900">
 
 ---
 
@@ -67,13 +67,13 @@ Built with **HTML**, **CSS**, and **JavaScript**, this website contains dedicate
 ## 🖼️ Sample Webpage Previews  
 
 ### 🧍 About Us  
-<img src="images/AboutUs.png" width="700">
+<img src="images/AboutUs.png" width="900">
 
 ### ⚙️ Products Page  
 ![Product Features](images/ProductDetails.gif)
 
 ### 📞 Contact Us  
-<img src="images/ContactUs.png" width="700">
+<img src="images/ContactUs.png" width="900">
 
 > _Replace the image paths above with actual links after uploading screenshots to your repository_
 
