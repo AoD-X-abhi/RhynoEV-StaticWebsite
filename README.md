@@ -1,5 +1,7 @@
 <div align="center">
+
 <img src="RhynoEV/Rhyno.png" width="300">
+
 # RhynoEV — Electric Bikes Website  
 
 [![HTML](https://img.shields.io/badge/HTML-5-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML)
