@@ -1,4 +1,6 @@
-# ⚡ RhynoEV — Electric Bikes Website  
+<div align="center">
+
+# <img src="RhynoEV/Rhyno.png" width="50"> RhynoEV — Electric Bikes Website  
 
 [![HTML](https://img.shields.io/badge/HTML-5-orange.svg)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS](https://img.shields.io/badge/CSS-3-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -7,7 +9,7 @@
 
 ---
 
-## 🏍️ Overview  
+### 🏍️ Overview  
 **RhynoEV** is a modern and responsive website designed to showcase **electric bikes** and promote the future of eco-friendly transportation.  
 The project emphasizes **clean UI design**, **interactive pages**, and **brand-focused presentation** for the electric vehicle industry.  
 
@@ -15,7 +17,12 @@ Built with **HTML**, **CSS**, and **JavaScript**, this website contains dedicate
 
 ---
 
+<img src="images/HomePage.png" width="700">
+
+---
+
 ## 🌐 Website Structure  
+</div>
 
 | Section | Description |
 |----------|-------------|
@@ -24,6 +31,8 @@ Built with **HTML**, **CSS**, and **JavaScript**, this website contains dedicate
 | ⚙️ **Products** | Displays electric bike models (SE Lite, SE01, SE01 Max) with specifications and images. |
 | 📞 **Contact Us** | Contact form and company network details. |
 | 🌍 **Network** | Information about the dealership and service network. |
+
+<div align="center">
 
 ---
 
@@ -57,19 +66,16 @@ Built with **HTML**, **CSS**, and **JavaScript**, this website contains dedicate
 
 ## 🖼️ Sample Webpage Previews  
 
-### 🏠 Home Page  
-![Home Page](Results/HomePage.png)
-
 ### 🧍 About Us  
-![About Us](Results/AboutUs.png)
+<img src="images/AboutUs.png" width="700">
 
 ### ⚙️ Products Page  
-![Products Page](Results/ProductsPage.png)
+![Product Features](images/ProductDetails.gif)
 
 ### 📞 Contact Us  
-![Contact Us](Results/ContactUs.png)
+<img src="images/ContactUs.png" width="700">
 
-> _*(Replace the image paths above with actual links after uploading screenshots to your repository)*_
+> _Replace the image paths above with actual links after uploading screenshots to your repository_
 
 ---
 
@@ -84,20 +90,20 @@ Built with **HTML**, **CSS**, and **JavaScript**, this website contains dedicate
 ---
 
 ## 🧠 Key Features  
-- ⚡ Responsive web design for desktop and mobile  
-- 🧍 Interactive About Us and Contact sections  
-- 💡 Modern design showcasing eco-friendly innovation  
-- 📸 Product images and detailed specifications  
-- 🔗 Navigation bar for seamless user experience  
+⚡ Responsive web design for desktop and mobile  
+🧍 Interactive About Us and Contact sections  
+💡 Modern design showcasing eco-friendly innovation  
+📸 Product images and detailed specifications  
+🔗 Navigation bar for seamless user experience  
 
 ---
 
-## 🧑‍💻 Developer  
+## 👨‍💻 Developer  
 
-**👤 Abhishek Pandey**  
-B.Tech CSE (AI), Amrita School of Engineering, Coimbatore  
+**Abhishek Pandey**  
+_B.Tech CSE (AI), Amrita School of Engineering, Coimbatore_  
 
-> _A web-based project showcasing the integration of design and clean structure in front-end development._
+> A web-based project showcasing the integration of design and clean structure in front-end development.
 
 ---
 
@@ -107,6 +113,6 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## 💬 How to Run  
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/your-username/RhynoEV.git
+
+```bash
+git clone https://github.com/AoD-X-abhi/RhynoEV-StaticWebsite.git
